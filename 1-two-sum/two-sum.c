@@ -1,3 +1,4 @@
+// Time complexity is O(n^2)
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     int* result = (int*)malloc(2 * sizeof(int));
     if (result == NULL) {
@@ -6,7 +7,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     }
 
     for (int i = 0; i < numsSize; i++) {
-        for (int j = i + 1; j < numsSize; j++) {  // Fixed here
+        for (int j = i + 1; j < numsSize; j++) {
             if (nums[i] + nums[j] == target) {
                 *returnSize = 2;
                 result[0] = i;
